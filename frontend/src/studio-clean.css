@@ -1,0 +1,106 @@
+/* Keep one creation task in view; secondary tools open when requested. */
+.page-studio .studio-minimal .studio-composer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px #25304a05;
+}
+.page-studio .studio-minimal .modal-form {gap: 22px;}
+.page-studio .studio-minimal .source-picker {
+  border-color: var(--brand-border);
+  background: color-mix(in srgb, var(--brand-soft) 35%, white);
+}
+.page-studio .studio-minimal .source-picker > summary {
+  min-height: 48px;
+  padding: 15px 16px;
+  color: var(--brand);
+  font-size: 13px;
+}
+.page-studio .studio-minimal .source-picker > div {
+  max-height: 230px;
+}
+.page-studio .studio-minimal .source-picker strong {font-size: 12px;}
+.page-studio .studio-minimal .source-picker input {accent-color: var(--brand);}
+.studio-generation-settings {border-top: 1px solid #e8e8ee;}
+.studio-generation-settings > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 0 0;
+  list-style: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: #646978;
+}
+.studio-generation-settings > summary::-webkit-details-marker {display: none;}
+.studio-generation-settings > summary svg {transition: rotate .2s;}
+.studio-generation-settings[open] > summary svg {rotate: 180deg;}
+.studio-generation-settings > label {
+  display: grid;
+  gap: 8px;
+  margin-top: 18px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.studio-generation-settings .small-note {margin: 12px 0 0;}
+.page-studio .studio-minimal .studio-create-action {
+  display: grid;
+  gap: 12px;
+}
+.page-studio .studio-minimal .studio-create-action .small-note {margin: 0;}
+.page-studio .studio-minimal > .disclosure {
+  max-width: 720px;
+  margin: 22px auto 0;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid #e4e5ec;
+  border-radius: 0;
+}
+.page-studio .studio-minimal > .disclosure > summary {padding: 18px 0;}
+.page-studio .studio-minimal > .disclosure > div {padding: 0;}
+.page-studio .studio-minimal .artifact-shelf {
+  max-height: 380px;
+  overflow: auto;
+  margin: 0;
+  padding: 2px;
+}
+.page-studio .studio-minimal .artifact-workbench {
+  padding: 28px;
+  box-shadow: none;
+}
+.page-studio .studio-minimal .artifact-heading {margin-bottom: 20px;}
+.page-studio .studio-minimal .artifact-heading h2 {
+  font-size: 22px;
+  margin: 10px 0 0;
+}
+.page-studio .studio-minimal .evidence-review {
+  padding: 18px 20px;
+  background: #f8faf8;
+  border-radius: 14px;
+  margin-top: 24px;
+}
+.page-studio .studio-minimal .review-heading {gap: 10px;}
+.page-studio .studio-minimal .review-heading h3 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+}
+.page-studio .studio-minimal .review-heading::after {font-size: 19px;}
+.page-studio .studio-minimal .artifact-exports {
+  justify-content: start;
+  margin: 18px 0 8px;
+}
+.studio-review-history {margin-top: 24px;}
+.studio-review-history h3 {font-size: 13px;font-weight: 600;}
+@media (max-width: 600px) {
+  .page-studio .studio-minimal .studio-composer,
+  .page-studio .studio-minimal .artifact-workbench {padding: 21px;}
+  .page-studio .studio-minimal .artifact-heading h2 {font-size: 20px;}
+  .page-studio .studio-minimal .evidence-review {padding: 16px;}
+}
+@media (prefers-reduced-motion: reduce) {
+  .studio-generation-settings > summary svg {transition: none;}
+}
+[data-motion=off] .studio-generation-settings > summary svg {transition: none;}

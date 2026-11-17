@@ -1,0 +1,2 @@
+import { defineConfig } from '@playwright/test';
+export default defineConfig({testDir: './e2e', webServer: {command: '../.venv/bin/python ../tests/browser_server.py', url: 'http://127.0.0.1:8021/api/health', reuseExistingServer: false, timeout: 20000}, workers: 1, timeout: 60000, use: {baseURL: 'http://127.0.0.1:5180', browserName: 'chromium', launchOptions: {executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH}}});

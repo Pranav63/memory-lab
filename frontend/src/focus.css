@@ -1,0 +1,138 @@
+/* One task per page; detail belongs behind an explicit choice. */
+.app {background: linear-gradient(160deg, color-mix(in srgb, var(--ambient) 25%, #f7f8fa), #f7f8fa 65%);}
+.app .sidebar {width: 220px; padding: 28px 14px 18px;}
+.app .main-shell {margin-left: 244px;}
+.app .brand {gap: 12px; margin-bottom: 24px; padding-inline: 10px;}
+.app .brand-word {font-size: 23px;}
+.app .sidebar-section-title {justify-content: flex-end; margin-bottom: 20px;}
+.app .sidebar nav {gap: 6px;}
+.app .sidebar nav button {height: 48px;}
+.app .connections {gap: 14px; padding: 14px 12px; font-size: 12px; border-top: 1px solid #ffffff14;}
+.app .connections > svg {display: block;}
+.app.rail-collapsed .sidebar {width: 82px; padding-inline: 10px;}
+.app.rail-collapsed .main-shell {margin-left: 106px;}
+.app.rail-collapsed .sidebar-section-title {justify-content: center;}
+.app.rail-collapsed .connections {justify-content: center; padding-inline: 0;}
+.app .topbar {height: 80px; padding-inline: 36px;}
+.app main {max-width: 1170px; padding: 18px 36px 32px;}
+.app .page-heading {padding: 0; margin: 0 0 30px; align-items: center; gap: 18px;}
+.app .page-heading h1 {font-size: 30px; letter-spacing: -1px; line-height: 1.25; margin: 0;}
+.app .page-heading .eyebrow {display: none;}
+.app .page-heading p {font-size: 12px; line-height: 1.7; margin-top: 9px; max-width: 560px;}
+.quiet-count {font-size: 12px; color: var(--muted);}
+.app .page-workspace .page-content {max-width: 780px; margin: 22px auto 0;}
+.workspace-focus {width: 100%;}
+.app .workflow-strip {background: transparent; border-color: var(--line); margin-bottom: 22px; padding: 5px;}
+.app .workflow-strip button {padding: 11px 15px;}
+.app .workflow-strip strong {font-weight: 600; font-size: 12px;}
+.app .workflow-strip button > span {background: transparent; border: 0; color: var(--muted);}
+.app .workflow-strip button > svg {margin-left: auto;}
+.app .question-form {padding: 28px; border-radius: 20px; box-shadow: 0 5px 24px #25304a04;}
+.app .question-form > label {font-size: 13px; font-weight: 600; margin-bottom: 18px;}
+.app .question-form > textarea {font-size: 18px; min-height: 135px; padding-bottom: 16px; line-height: 1.8;}
+.question-actions {display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 20px;}
+.research-summary {font-size: 11px; color: #626b80; line-height: 1.7;}
+.research-options {border-top: 1px solid var(--line); margin-top: 22px;}
+.research-options > summary {display: flex; align-items: center; justify-content: space-between; gap: 12px; list-style: none; cursor: pointer; font-size: 12px; color: #626b80; padding: 17px 0 0;}
+.research-options > summary::-webkit-details-marker {display: none;}
+.research-options > summary svg {transition: rotate .2s;}
+.research-options[open] > summary svg {rotate: 180deg;}
+.research-options > div {padding-top: 3px;}
+.research-options .internet-option {position: relative; display: grid; grid-template-columns: 36px minmax(0,1fr) 39px; gap: 12px; align-items: center; padding: 14px; margin-top: 18px; border: 1px solid #dee7e1; background: #f5f8f5; border-radius: 12px; cursor: pointer;}
+.research-options .internet-option:focus-within {outline: 3px solid var(--brand-border); outline-offset: 3px;}
+.research-options .internet-option-icon {height: 36px; width: 36px;}
+.research-options .internet-option-copy strong {font-size: 12px;}
+.research-options .internet-option-copy small {margin-top: 2px; font-size: 10px;}
+.app .workspace-focus .answer-card {margin-top: 26px; box-shadow: none; padding: 26px;}
+.app .answer-heading :is(h2,h4) {font-size: 16px; font-weight: 700; letter-spacing: -.3px;}
+.app .answer-card .disclosure {background: transparent; box-shadow: none; border: 0; border-top: 1px solid var(--line); border-radius: 0;}
+.app .answer-card .disclosure > summary {padding: 18px 0 0;}
+.app .answer-card .disclosure > div {padding: 14px 0 0;}
+.evidence-expand {margin-top: 18px;}
+.app .library-toolbar {justify-content: space-between; margin-bottom: 22px; gap: 14px;}
+.app .library-toolbar .search-control {flex: 1; max-width: 470px; background: #fff;}
+.app .library-toolbar .search-control input {width: 100%; font-size: 12px;}
+.app .select-control select {font-size: 12px; padding: 11px 12px; max-width: 235px;}
+.app .source-grid {grid-template-columns: 1fr; gap: 12px;}
+.app .source-card.compact {grid-template-columns: 40px minmax(0,1fr); padding: 16px 20px; gap: 18px; border-radius: 14px; box-shadow: none;}
+.app .source-card.compact .paper-cover {height: 52px; padding: 0; border-radius: 6px; display: grid; place-items: center; box-shadow: none;}
+.app .source-card.compact .cover-art, .app .source-card.compact .cover-title {display: none;}
+.app .source-card.compact .cover-bottom {display: flex; position: static; padding: 0;}
+.app .source-card.compact .cover-bottom > span, .app .source-card.compact .cover-bottom > svg:last-child {display: none;}
+.app .source-card.compact .source-card-info strong {font-size: 13px; line-height: 1.6; font-weight: 600;}
+.app .source-card.compact .source-card-info > span {font-size: 10px; margin-top: 6px;}
+.app .source-card.compact .source-open {margin-left: auto;}
+.app .memory-view-tabs {margin: 0 0 24px; padding: 4px; background: transparent; border-color: var(--line);}
+.app .memory-view-tabs button {font-weight: 600; padding: 11px 18px;}
+.app .memory-view-tabs button > span {display: none;}
+.app .finding-list {gap: 12px;}
+.app .finding-card {border-radius: 14px; box-shadow: none;}
+.app .finding-card > summary {padding: 20px; gap: 16px;}
+.app .finding-number {display: none;}
+.app .finding-card strong {font-size: 13px; line-height: 1.7; font-weight: 600;}
+.app .finding-card small {font-size: 10px; margin-top: 7px;}
+.app .finding-card > summary > span:nth-child(2) {flex: 1;}
+.app .memory-graph-room, .app .memory-timeline-room {margin-top: 0;}
+.app .page-experiments .question-form {max-width: 780px;}
+.app .page-experiments > .page-content > .disclosure {max-width: 780px; background: transparent; border: 0; border-top: 1px solid var(--line); border-radius: 0; margin-top: 25px;}
+.app .page-experiments > .page-content > .disclosure > summary {padding-inline: 0;}
+.app .discovery-search {margin-top: 0; box-shadow: none; max-width: 780px;}
+.app .page-discover > .page-content > .disclosure {max-width: 780px; background: transparent; border: 0; border-top: 1px solid var(--line); border-radius: 0;}
+.app .page-discover > .page-content > .disclosure > summary {padding-inline: 0;}
+.app .page-models .catalog-controls {margin-top: 0;}
+.app .page-models .catalog-attribution {border: 0; background: transparent;}
+.app footer {border: 0; margin: 32px 0 0; padding: 0;}
+.app footer > .text-button {margin-left: 0; font-size: 10px; color: var(--muted); font-weight: 500;}
+.more-tools {display: grid; gap: 10px;}
+.more-tools button {display: flex; align-items: center; gap: 16px; padding: 19px; text-align: left; background: #f8f9fb; border: 1px solid var(--line); border-radius: 14px;}
+.more-tools button:hover {background: #f1f2f7;}
+.more-tools button > span {flex: 1;}
+.more-tools strong {display: block; font-size: 13px; font-weight: 600;}
+.more-tools small {display: block; font-size: 11px; color: var(--muted); margin-top: 6px;}
+@media (max-width: 1000px) and (min-width: 601px) {
+  .app .sidebar {width: 82px; padding-inline: 10px;}
+  .app .main-shell {margin-left: 106px;}
+  .app .sidebar-section-title {justify-content: center;}
+  .app .connections {justify-content: center; padding-inline: 0;}
+}
+@media (max-width: 600px) {
+  .app .main-shell, .app.rail-collapsed .main-shell {margin-left: 0;}
+  .app .topbar {height: 72px; padding-inline: 20px;}
+  .app main {padding: 24px 20px 114px;}
+  .app .page-workspace .page-content {margin-top: 0;}
+  .app .page-heading {margin-bottom: 26px; flex-wrap: nowrap; gap: 12px;}
+  .app .page-heading h1 {font-size: 27px;}
+  .app .page-heading p {font-size: 11px;}
+  .app .page-heading .button {font-size: 10px; padding: 10px; gap: 5px;}
+  .app .workflow-strip {gap: 0; margin-bottom: 20px;}
+  .app .workflow-strip button {padding: 9px 6px; gap: 5px;}
+  .app .workflow-strip strong {font-size: 10px;}
+  .app .workflow-strip button > span {font-size: 8px; width: 18px;}
+  .app .question-form {padding: 22px; border-radius: 18px;}
+  .app .question-form > textarea {min-height: 155px; font-size: 16px;}
+  .question-actions {flex-wrap: wrap; gap: 14px;}
+  .question-actions > .button {width: 100%;}
+  .research-summary {font-size: 10px;}
+  .app .library-toolbar {flex-wrap: wrap; gap: 12px;}
+  .app .library-toolbar .search-control {flex-basis: 100%; width: 100%;}
+  .app .library-toolbar .select-control {flex: 0 1 auto;}
+  .app .source-card.compact {padding: 16px; gap: 14px;}
+  .app .source-card.compact .source-card-info strong {font-size: 12px;}
+  .app .finding-card > summary {padding: 18px; gap: 12px;}
+  .app .finding-card > summary > span:nth-child(2) {flex-basis: 100%;}
+  .app .finding-card > summary > .tag {margin-left: 0;}
+  .app .memory-view-tabs {margin: 0 0 22px;}
+  .app .memory-view-tabs button {padding: 10px 12px;}
+  .app .mobile-nav {grid-template-columns: repeat(5,minmax(0,1fr));}
+  .app .mobile-nav button {font-size: 9px; padding-block: 9px;}
+  .more-tools button {padding: 16px;}
+}
+@media (prefers-reduced-motion: reduce) {.research-options > summary svg {transition: none;}}
+[data-motion=off] .research-options > summary svg {transition: none;}
+
+.app .model-table tbody th > span {color: #60697d;}
+.app .empty-state h2 {font-size: 20px; margin-bottom: 12px;}
+.network-expanded .network-body.network-browsing {grid-template-columns: minmax(0,1fr);}
+
+.network-inspector h2 {font-size: 21px; line-height: 1.45; margin: 17px 0 14px; letter-spacing: -.6px; color: #f0f2fc; overflow-wrap: anywhere;}
+.network-empty h2 {font-size: 15px; line-height: 1.6; color: #eff1ff; margin: 11px 0;}

@@ -1,0 +1,141 @@
+/* Collection pages keep the source or finding in focus. */
+.app :is(.page-library,.page-memory,.page-experiments) .page-content {max-width: 1000px; margin: 12px auto 0;}
+.collection-intro {position: relative; display: flex; align-items: center; justify-content: space-between; min-height: 198px; margin-bottom: 28px; gap: 20px;}
+.collection-copy {position: relative; z-index: 1; min-width: 0;}
+.collection-kicker {font-size: 10px; font-weight: 700; letter-spacing: 1.8px; color: #636b7f;}
+.collection-intro h1 {font-family: 'Space Grotesk',sans-serif; font-size: clamp(40px,4vw,54px); font-weight: 500; line-height: 1.15; letter-spacing: -2.5px; margin-top: 16px;}
+.collection-copy > p {font-size: 15px; color: #5d667a; line-height: 1.7; margin-top: 14px;}
+.collection-meta,.collection-history {display: inline-flex; align-items: center; gap: 7px; font-size: 10px; color: #606b80; margin-top: 17px; line-height: 1.6;}
+.collection-history {border: 1px solid var(--brand-border); padding: 8px 11px; border-radius: 20px; background: #ffffffb3;}
+.collection-history:hover {background: var(--brand-soft); color: var(--brand);}
+.collection-art {position: relative; width: 238px; height: 192px; flex-shrink: 0; pointer-events: none;}
+.collection-art::before {content: ''; position: absolute; inset: 4px; background: radial-gradient(ellipse,var(--brand-soft),transparent 70%); filter: blur(6px);}
+.library-art-orbit {position: absolute; width: 230px; height: 122px; border: 1px solid var(--brand-border); border-radius: 50%; top: 47px; transform: rotate(-20deg); opacity: .65;}
+.library-book {position: absolute; width: 78px; height: 118px; border-radius: 6px 12px 12px 6px; border: 1px solid #ffffffb3; border-left: 6px solid #0000000d; box-shadow: 6px 14px 28px #28305209; padding: 20px 13px; animation: collection-float 7s ease-in-out infinite;}
+.library-book i {display: block; height: 3px; width: 80%; background: currentColor; opacity: .2; border-radius: 2px; margin-top: 10px;}
+.library-book i:last-child {width: 50%;}
+.book-one {left: 31px; top: 35px; transform: rotate(-18deg); background: #dceee5; color: #3d7866; animation-delay: -2s;}
+.book-two {left: 86px; top: 26px; transform: rotate(9deg); background: #f5e8d7; color: #946835; animation-delay: -4s;}
+.book-three {left: 124px; top: 53px; transform: rotate(19deg); background: var(--brand-soft); color: var(--brand);}
+.library-art-spark {position: absolute; left: 203px; top: 26px; color: var(--brand); animation: collection-float 5s ease-in-out -2s infinite;}
+.app .page-library .library-toolbar {padding: 12px; border: 1px solid #e2e5ed; border-radius: 16px; background: #ffffff73; margin-bottom: 26px;}
+.app .page-library .search-control {max-width: none; border: 0; background: transparent; padding-inline: 10px;}
+.app .page-library .select-control {background: #fff; border-color: #e3e6ed; border-radius: 10px;}
+.collection-section-label {display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 16px; font-size: 11px; color: #687287;}
+.collection-section-label > span:first-child {font-weight: 650; color: #49546c;}
+.app .page-library .source-grid {grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px;}
+.app .page-library .source-card.compact {grid-template-columns: 68px minmax(0,1fr); padding: 22px; gap: 19px; min-height: 139px; border-radius: 18px; background: #ffffffc9; border: 1px solid #e2e5ed; box-shadow: 0 5px 20px #29325203; transition: border-color .2s,background .2s,box-shadow .2s;}
+.app .page-library .source-card.compact:hover {background: #fff; border-color: var(--brand-border); box-shadow: 0 9px 25px #29325207;}
+.app .page-library .source-card.compact .paper-cover {height: 94px; border-radius: 5px 9px 9px 5px; border-left: 4px solid #0000000b; padding: 13px 9px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; box-shadow: 3px 5px 9px #26304a07;}
+.app .page-library .source-card.compact .cover-title {display: block; font-size: 10px; line-height: 1.45; font-family: 'Space Grotesk',sans-serif; letter-spacing: -.2px; overflow-wrap: normal; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%;}
+.app .page-library .source-card.compact .cover-type {display: none;}
+.app .page-library .source-card.compact .source-card-info strong {font-size: 14px; line-height: 1.6;}
+.app .page-library .source-card.compact .source-card-info > span {display: flex; font-size: 10px; gap: 8px; flex-wrap: wrap; margin-top: 13px;}
+.app .page-library .source-open {display: inline-flex; color: var(--brand); opacity: 1; transform: none; font-weight: 600;}
+.memory-art::before {background: radial-gradient(ellipse,#deeee9,transparent 70%);}
+.memory-art-ring {position: absolute; border: 1px solid #b3d6c8; border-radius: 50%; width: 181px; height: 156px; top: 21px; left: 27px; transform: rotate(-28deg); opacity: .7;}
+.memory-art-ring.ring-inner {width: 149px; height: 120px; top: 39px; left: 44px; border-style: dashed; border-color: var(--brand-border); transform: rotate(38deg);}
+.memory-art-center {position: absolute; left: 83px; top: 65px; width: 66px; height: 66px; display: grid; place-items: center; background: #fff; border: 1px solid #dce8e2; border-radius: 22px; color: #347665; box-shadow: 0 10px 22px #1f4c3508; animation: collection-float 7s ease-in-out infinite;}
+.memory-art-node {position: absolute; width: 37px; height: 37px; display: grid; place-items: center; border-radius: 12px; border: 1px solid #ffffffc9; box-shadow: 0 7px 15px #27304e06; animation: collection-float 6s ease-in-out infinite;}
+.node-one {left: 30px; top: 30px; background: var(--brand-soft); color: var(--brand); animation-delay: -1s;}
+.node-two {left: 174px; top: 54px; background: #f5e8d6; color: #916331; animation-delay: -3s;}
+.node-three {left: 155px; top: 136px; background: #dfeee7; color: #397462; animation-delay: -5s;}
+.memory-art-thread {position: absolute; height: 1px; background: #abc6bf; transform-origin: left; width: 65px; left: 60px; top: 61px; transform: rotate(36deg);}
+.thread-two {left: 140px; top: 119px; width: 49px; transform: rotate(42deg);}
+.memory-controls {display: flex; justify-content: space-between; gap: 14px; align-items: center; margin-bottom: 26px;}
+.app .memory-controls .memory-view-tabs {margin: 0; background: #ffffff80; border-radius: 14px; border: 1px solid #dfe4e9;}
+.app .memory-controls .memory-view-tabs button {padding: 11px 17px; border-radius: 10px; font-size: 11px;}
+.app .memory-controls .memory-view-tabs button[aria-pressed=true] {background: white; box-shadow: 0 3px 10px #26304a0a; color: var(--brand);}
+.app .memory-save {border-radius: 12px; font-size: 11px; padding: 12px 17px;}
+.app .page-memory .finding-list {gap: 16px;}
+.app .page-memory .finding-card {border-radius: 18px; border: 1px solid #dfe6e3; background: #ffffffbd; overflow: hidden;}
+.app .page-memory .finding-card > summary {padding: 26px; gap: 20px;}
+.app .page-memory .finding-number {display: grid; place-items: center; background: #e9f1ec; color: #3d6b58; height: 40px; width: 40px; flex-shrink: 0; border-radius: 13px; font-family: 'Space Grotesk',sans-serif; font-size: 13px;}
+.app .page-memory .finding-card strong {font-size: 14px; line-height: 1.8;}
+.app .page-memory .finding-card small {margin-top: 10px;}
+.app .page-memory .finding-card[open] {background: #fff; border-color: #bad4c9;}
+.app .page-memory .finding-body {padding: 24px 26px; background: #f8faf9; border-top: 1px solid #e4ebe6;}
+.app .page-memory .finding-body .body-copy {font-size: 14px; line-height: 1.9;}
+.app .page-memory .memory-network {border-radius: 22px; border-color: #27384f; box-shadow: 0 14px 35px #202a3c0b; background: #142035;}
+.app .page-memory .network-toolbar {padding: 17px 20px; background: #1c2a41; border-bottom: 1px solid #344056;}
+.app .page-memory .network-stage {background: radial-gradient(ellipse at 30% 20%,#22344b,#142035 70%);}
+.app .page-memory .network-canvas {min-height: 360px;}
+.app .page-memory .network-search {border-radius: 11px;}
+.app .page-memory .network-inspector {background: #19263b; border-left-color: #344056;}
+.app .page-memory .memory-timeline-room {padding: 27px; background: #ffffffa6; border: 1px solid #dfe6e3; border-radius: 20px;}
+.app .page-memory .timeline > div {padding-bottom: 26px;}
+.app .page-memory .timeline p {font-size: 13px; line-height: 1.85;}
+.experiment-art::before {background: radial-gradient(ellipse,#eee5f7,transparent 70%);}
+.experiment-art-ring {position: absolute; width: 186px; height: 157px; border: 1px dashed var(--brand-border); border-radius: 50%; top: 19px; left: 22px; transform: rotate(-28deg);}
+.experiment-art-bar {position: absolute; width: 35px; bottom: 40px; border-radius: 11px 11px 3px 3px; box-shadow: inset 0 1px 0 #ffffff; animation: experiment-glimmer 6s ease-in-out infinite;}
+.bar-one {left: 53px; height: 50px; background: #d2d8e5;}
+.bar-two {left: 97px; height: 82px; background: #b9ddcd; animation-delay: -2s;}
+.bar-three {left: 141px; height: 116px; background: var(--brand-border); animation-delay: -4s;}
+.experiment-art-line {position: absolute; height: 1px; width: 149px; left: 40px; bottom: 39px; background: #c9cad8;}
+.experiment-art-icon {position: absolute; right: 11px; top: 9px; border: 1px solid #fff; width: 44px; height: 44px; border-radius: 15px; color: var(--brand); background: #fff; display: grid; place-items: center; animation: collection-float 7s ease-in-out -2s infinite;}
+.experiment-preview {display: flex; gap: 23px; flex-wrap: wrap; align-items: center; padding: 0 3px 23px; font-size: 11px; color: #566179;}
+.experiment-preview > span {display: inline-flex; align-items: center; gap: 7px;}
+.experiment-preview i {width: 7px; height: 7px; border-radius: 50%; background: #939eaf;}
+.experiment-preview > span:nth-child(2) i {background: #4b8f74;}
+.experiment-preview > span:nth-child(3) i {background: var(--brand);}
+.experiment-preview small {font-size: 10px; color: #677186; margin-left: auto;}
+.app .page-experiments .question-form {max-width: none; padding: 29px 31px; border-radius: 23px; border-color: var(--brand-border); box-shadow: 0 10px 30px #27304e04;}
+.app .page-experiments .condition-card {border-radius: 20px; box-shadow: none; border: 1px solid #e2e3ed;}
+.app .page-experiments .condition-card h3 {font-size: 20px;}
+.app .page-experiments .condition-answer {margin-top: 24px;}
+.app .page-experiments .experiment-results {margin-top: 32px;}
+.app .page-experiments > .page-content > .disclosure {max-width: none;}
+@keyframes collection-float {0%,100% {translate: 0 0;} 50% {translate: 0 -6px;}}
+@keyframes experiment-glimmer {0%,100% {opacity: .82;} 50% {opacity: 1;}}
+@media (max-width: 1100px) {
+  .collection-art {scale: .85; transform-origin: right center; width: 215px;}
+  .app .page-library .source-card.compact {padding: 18px; grid-template-columns: 57px minmax(0,1fr); gap: 16px;}
+  .app .page-library .source-card.compact .source-card-info strong {font-size: 12px;}
+}
+@media (max-width: 760px) {
+  .collection-intro {min-height: 176px;}
+  .collection-art {position: absolute; right: 0; top: -8px; scale: .58; transform-origin: right top; width: 238px;}
+  .collection-copy {max-width: 78%;}
+  .collection-intro h1 {font-size: 42px;}
+  .collection-copy > p {font-size: 13px; max-width: 260px;}
+  .app .page-library .source-grid {grid-template-columns: 1fr;}
+  .app .page-library .source-card.compact {min-height: 110px; grid-template-columns: 52px minmax(0,1fr);}
+  .app .page-library .source-card.compact .paper-cover {height: 76px;}
+  .app .page-library .source-card.compact .source-card-info strong {font-size: 13px;}
+  .app .page-memory .finding-card > summary {padding: 22px 18px; gap: 14px; flex-wrap: wrap;}
+  .app .page-memory .finding-card > summary > span:nth-child(2) {flex: 1; flex-basis: calc(100% - 80px);}
+  .app .page-memory .finding-card > summary > .tag {margin-left: 54px;}
+  .app .page-memory .finding-card > summary > svg {margin-left: auto;}
+  .app .page-memory .finding-card strong {font-size: 12px;}
+  .app .page-memory .finding-body {padding: 21px;}
+  .app .page-memory .network-canvas {min-height: 290px;}
+}
+@media (max-width: 600px) {
+  .app :is(.page-library,.page-memory,.page-experiments) .page-content {margin-top: 0;}
+  .collection-intro {margin-bottom: 24px; min-height: 168px;}
+  .collection-kicker {font-size: 8px; letter-spacing: 1.4px;}
+  .collection-copy {max-width: 85%;}
+  .collection-intro h1 {font-size: 39px; letter-spacing: -1.9px; margin-top: 15px;}
+  .collection-art {scale: .42; top: 23px; right: -2px;}
+  .collection-meta {font-size: 9px; gap: 5px; max-width: 220px; flex-wrap: wrap;}
+  .collection-copy > p {max-width: 220px; font-size: 12px;}
+  .app .page-library .library-toolbar {padding: 8px; gap: 7px;}
+  .app .page-library .library-toolbar .search-control {padding-inline: 8px;}
+  .app .page-library .library-toolbar .select-control {flex: 1;}
+  .app .page-library .library-toolbar select {width: 100%; max-width: none;}
+  .collection-section-label {font-size: 10px; gap: 8px;}
+  .memory-controls {align-items: stretch; flex-wrap: wrap; gap: 15px;}
+  .app .memory-controls .memory-view-tabs {flex: 1; width: 100%;}
+  .app .memory-controls .memory-view-tabs button {flex: 1; padding: 10px 9px;}
+  .app .memory-controls .memory-save {font-size: 10px; padding: 10px 13px; margin-left: auto;}
+  .app .page-memory .network-toolbar {padding: 14px;}
+  .app .page-memory .memory-timeline-room {padding: 20px;}
+  .experiment-preview {gap: 13px; font-size: 9px; padding-bottom: 21px;}
+  .experiment-preview small {margin-left: 0; width: 100%;}
+  .app .page-experiments .question-form {padding: 23px; border-radius: 20px;}
+  .app .page-experiments .question-form > textarea {font-size: 16px;}
+}
+@media (max-width: 360px) {.collection-art {display: none;}.collection-copy {max-width: 100%;}.collection-kicker {letter-spacing: 1px;}}
+@media (prefers-reduced-motion: reduce) {.collection-art * {animation: none!important;}.app .page-library .source-card.compact {transition: none;}}
+[data-motion=off] .collection-art * {animation: none!important;}
+[data-motion=off] .page-library .source-card.compact {transition: none;}
